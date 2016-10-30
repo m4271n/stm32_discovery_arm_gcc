@@ -25,7 +25,9 @@ int main(void)
     GPIOD->MODER = (1 << 26);             // set pin 13 to be general purpose output
 
     for (;;) {
-       ms_delay(500);
-       GPIOD->ODR ^= (1 << 13);           // Toggle the pin 
+       ms_delay(1000);
+       GPIOD->ODR ^= (1 << 13);           // Toggle the pin
+       ms_delay(100);
+       GPIOD->ODR ^= (1 << 13);           // Toggle the pin
     }
 }
